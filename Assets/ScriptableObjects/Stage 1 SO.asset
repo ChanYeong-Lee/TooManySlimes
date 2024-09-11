@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda534219bbe10c4ba7595006a4f816b, type: 3}
+  m_Name: Stage 1 SO
+  m_EditorClassIdentifier: 
+  stageLevel: 1
+  levelDataList:
+  - levelDataSO: {fileID: 11400000, guid: 21ca19f9426f17f41b0898d995c80bf6, type: 2}
+    startHeight: 20
+  - levelDataSO: {fileID: 11400000, guid: 643e2ae4359db8f489e9c88d40333177, type: 2}
+    startHeight: 50
+  - levelDataSO: {fileID: 11400000, guid: 23d5b3aa5698c28469d24271ba920c34, type: 2}
+    startHeight: 60
+  - levelDataSO: {fileID: 11400000, guid: f2c98865a5d4af444bb3c76b1aa119d8, type: 2}
+    startHeight: 100
+  - levelDataSO: {fileID: 11400000, guid: 474aee0fa63a21543808f2230a3af8d1, type: 2}
+    startHeight: 120
+  goalHeight: 150

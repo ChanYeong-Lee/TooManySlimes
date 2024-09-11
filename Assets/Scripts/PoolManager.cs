@@ -13,6 +13,7 @@ public class PoolManager : MonoBehaviour
         {
             Debug.LogError("There's more than one PoolManager");
             Destroy(gameObject);
+            return;
         }
 
         Instance = this;

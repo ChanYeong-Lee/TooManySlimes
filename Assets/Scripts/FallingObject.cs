@@ -14,7 +14,7 @@ public class FallingObject : MonoBehaviour
 
     private void OnEnable()
     {
-        spawnedHeight = transform.position.y - playerHeight.GetHeight();
+        spawnedHeight = transform.position.y + playerHeight.GetHeight();
     }
 
     private void Update()
@@ -24,6 +24,6 @@ public class FallingObject : MonoBehaviour
             return;
         }
 
-        transform.position = new Vector2(transform.position.x, spawnedHeight - playerHeight.GetHeight());
+        transform.position = new Vector3(transform.position.x, (spawnedHeight - playerHeight.GetHeight()), 0.0f);
     }
 }

@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
         {
             Debug.LogError("There's more than one InputManager");
             Destroy(gameObject);
+            return;
         }
         
         Instance = this;
