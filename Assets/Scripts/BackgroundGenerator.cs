@@ -30,7 +30,6 @@ public class BackgroundGenerator : MonoBehaviour
     }
 
     [SerializeField] private List<BackgroundData> backgroundDataList;
-    [SerializeField] private PlayerHeight playerHeight;
 
     private void Awake()
     {
@@ -42,14 +41,9 @@ public class BackgroundGenerator : MonoBehaviour
 
     private void Update()
     {
-        if (playerHeight == null)
-        {
-            return;
-        }
-
         foreach (BackgroundData backgroundData in backgroundDataList)
         {
-            backgroundData.UpdateBackgroundSprites(playerHeight.GetHeight());
+            backgroundData.UpdateBackgroundSprites(PlayerHeight.Instance.GetHeight());
         }
     }
 }

@@ -5,17 +5,26 @@ using UnityEngine;
 
 public class PlayerHeight : MonoBehaviour
 {
+    public static PlayerHeight Instance { get; private set; }
+
     [SerializeField] private float moveSpeed = 1.0f;
-    [SerializeField] private float height;
-    [SerializeField] private bool isMoving = true;
     [SerializeField] private LayerMask collisionLayerMask;
 
-    private BoxCollider2D boxCollider2D;
+    private bool isMoving = true;
+    private float height;
     private float startPosY = -4.0f;
 
     private void Awake()
     {
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        if (Instance != null)
+        {
+            Debug.LogError("There's more than one PlayerHeight");
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+
     }
 
     private void Update()
@@ -31,7 +40,6 @@ public class PlayerHeight : MonoBehaviour
         }
 
         height += moveSpeed * Time.deltaTime;
-        
     }
 
     private void CheckCollision()
@@ -56,5 +64,10 @@ public class PlayerHeight : MonoBehaviour
     public float GetHeight()
     {
         return height;
+    }
+
+    public void ResetHeight()
+    {
+        height = 0.0f;
     }
 }
