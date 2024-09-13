@@ -4,31 +4,13 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public GameObject prefab;
-    private Stack<GameObject> spawnedObjectsStack;
-
-    private void Awake()
-    {
-        spawnedObjectsStack = new Stack<GameObject>();
-    }
-    private void Start()
-    {
-        PoolManager.Instance.Prespawn(prefab, 100, transform);
-    }
-
+    public GameObject follower1;
+    public GameObject follower2;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            spawnedObjectsStack.Push(PoolManager.Instance.Spawn(prefab, transform.position, Quaternion.identity));
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (spawnedObjectsStack.Count > 0)
-            {
-                PoolManager.Instance.Despawn(spawnedObjectsStack.Pop());
-            }
+            PlayerFollowerController.Instance.AddFollower(PoolManager.Instance.Spawn(follower1, transform.position, Quaternion.identity));
         }
     }
 }

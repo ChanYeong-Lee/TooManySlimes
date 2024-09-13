@@ -81,6 +81,7 @@ public class PoolManager : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+        gameObject.transform.parent = null;
         poolDictionary[prefabKey].Enqueue(gameObject);
     }
 }

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb650486b09a6e94bab41509b4c2a337, type: 3}
   m_Name: Stage 1 - 1  MonsterLevelDataSO
   m_EditorClassIdentifier: 
-  startHeight: 0
   monsterPrefabDataList:
-  - monsterPrefab: {fileID: 0}
-    percent: 0
+  - monsterPrefab: {fileID: 2652299156408765778, guid: 43a40f985083ca54d980cc97ae6329dd, type: 3}
+    percent: 0.8
+  - monsterPrefab: {fileID: 2724877705664681189, guid: dd041bb9520876b41ada8836435b9134, type: 3}
+    percent: 0.2

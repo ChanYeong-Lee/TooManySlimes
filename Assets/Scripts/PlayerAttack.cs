@@ -149,7 +149,6 @@ public class PlayerAttack : MonoBehaviour
                 minimumDistanceHealthSystem.Damage(attackDamage);
             }
         }
-
     }
 
     public void Attack()

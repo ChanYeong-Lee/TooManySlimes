@@ -16,12 +16,14 @@ MonoBehaviour:
   levelDataList:
   - levelDataSO: {fileID: 11400000, guid: 21ca19f9426f17f41b0898d995c80bf6, type: 2}
     startHeight: 20
-  - levelDataSO: {fileID: 11400000, guid: 643e2ae4359db8f489e9c88d40333177, type: 2}
-    startHeight: 50
-  - levelDataSO: {fileID: 11400000, guid: 23d5b3aa5698c28469d24271ba920c34, type: 2}
-    startHeight: 60
-  - levelDataSO: {fileID: 11400000, guid: f2c98865a5d4af444bb3c76b1aa119d8, type: 2}
+  - levelDataSO: {fileID: 11400000, guid: 1cced973c307c534790a8735b6f74062, type: 2}
     startHeight: 100
-  - levelDataSO: {fileID: 11400000, guid: 474aee0fa63a21543808f2230a3af8d1, type: 2}
+  - levelDataSO: {fileID: 11400000, guid: 643e2ae4359db8f489e9c88d40333177, type: 2}
     startHeight: 120
-  goalHeight: 150
+  - levelDataSO: {fileID: 11400000, guid: 23d5b3aa5698c28469d24271ba920c34, type: 2}
+    startHeight: 140
+  - levelDataSO: {fileID: 11400000, guid: f2c98865a5d4af444bb3c76b1aa119d8, type: 2}
+    startHeight: 200
+  - levelDataSO: {fileID: 11400000, guid: 474aee0fa63a21543808f2230a3af8d1, type: 2}
+    startHeight: 220
+  goalHeight: 280

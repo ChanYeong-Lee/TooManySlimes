@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Stage  -  SelectionLevelDataSO", menuName = "LevelDataSO/New Selection Level Data")]
 public class SelectionLevelDataSO : LevelDataSO
 {
-    [Range(1, 5)] public int rairity;
+    public ItemRairity rairity;
 }

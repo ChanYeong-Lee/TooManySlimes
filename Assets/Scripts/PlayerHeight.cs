@@ -11,6 +11,7 @@ public class PlayerHeight : MonoBehaviour
     [SerializeField] private LayerMask collisionLayerMask;
 
     private bool isMoving = true;
+    private bool isCollision = true;
     private float height;
     private float startPosY = -4.0f;
 
@@ -24,17 +25,21 @@ public class PlayerHeight : MonoBehaviour
         }
 
         Instance = this;
-
     }
 
     private void Update()
     {
+        if (isMoving == false)
+        {
+            return;
+        }
+
         float lerpValue = 2.0f * Time.deltaTime;
         transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x, startPosY), lerpValue);
 
         CheckCollision();
 
-        if (isMoving == false)
+        if (isCollision == false)
         {
             return;
         }
@@ -48,11 +53,11 @@ public class PlayerHeight : MonoBehaviour
 
         if (hitCollider != null)
         {
-            isMoving = false;
+            isCollision = false;
         }
         else
         {
-            isMoving = true;
+            isCollision = true;
         }
     }
 

@@ -21,14 +21,14 @@ public class ObjectSpawner : MonoBehaviour
     }
 
 
-    public void SpawnObject(GameObject gameObject, int spawnPoint, Quaternion rotation)
+    public GameObject SpawnObject(GameObject gameObject, int spawnPoint, Quaternion rotation)
     {
         if (spawnPoint > objectPointsList.Count)
         {
-            return;
+            return null;
         }
 
-        PoolManager.Instance.Spawn(gameObject, objectPointsList[spawnPoint].position, rotation);
+        return PoolManager.Instance.Spawn(gameObject, objectPointsList[spawnPoint].position, rotation);
     }
 
 }
